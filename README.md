@@ -4,8 +4,6 @@ A script build in python for editing save files for the binding of isaac repenta
 This project was heavily inspired and relies on the source code for the afterbirth save editor found here:
 https://moddingofisaac.com/mod/3236/afterbirth-save-editor-v10
 
-THIS PROJECT HAS NOT BEEN TESTED ON THE ONLINE BETA, USE AT YOUR OWN RISK!!!
-
 As always, be sure to backup any saves before using this tool, as I do not guarantee that your save file will not be corrupted.
 
 <img width="681" alt="image" src="https://github.com/jamesthejellyfish/isaac-save-edit-script/assets/11594527/23bfc7f2-fa00-40c4-849d-b702f9989f4e">
