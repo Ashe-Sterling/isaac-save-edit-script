@@ -57,10 +57,6 @@ def openSaveFile(*args):
             print ('    another arg:', arg)
         sys.stdout.flush()
     initpath = os.getcwd()
-    if os.path.exists(os.environ["ProgramFiles(x86)"] + "/Steam/userdata"):
-        initpath = os.environ["ProgramFiles(x86)"] + "/Steam/userdata"
-    elif os.path.exists(os.environ["ProgramFiles"] + "/Steam/userdata"):
-        initpath = os.environ["ProgramFiles"] + "/Steam/userdata"
         
     filename = fd.askopenfilename(initialdir=initpath, filetypes = (('dat files', '*.dat'), ('all files', '*.*')))
     with open(filename, "rb") as file:
