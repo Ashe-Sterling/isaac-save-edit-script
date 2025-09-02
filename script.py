@@ -170,7 +170,7 @@ def getChallenges(data):
 def getSecrets(data):
     secrets_data = []
     offs = getSectionOffsets(data)[0]
-    for i in range(1, 638):
+    for i in range(1, 641):
         secrets_data.append(getInt(data, offs+i, num_bytes=1))
     return secrets_data
 
@@ -251,7 +251,7 @@ def getInt(data, offset, debug=False, num_bytes=2):
     return int.from_bytes(data[offset:offset+num_bytes], 'little')
 
 def updateSecrets(data, secret_list):
-    for i in range(1, 638):
+    for i in range(1, 641):
         data = alterSecret(data, i, False)
     for i in secret_list:
         data = alterSecret(data, int(i))
@@ -294,10 +294,6 @@ if __name__ == "__main__":
     
     # update a character's post-it: 0 is not completed, 1 is completed on normal, 2 is completed on hard. order is in checklist_order.
     data = updateCheckListUnlocks(data, characters.index("Maggie"), [0,0,1,0,2,1,0,1,0,0,0,2])
-    # enable secrets for online beta NOTE: THIS HAS NOT BEEN TESTED ON THE ONLINE BETA!!! USE AT OWN RISK!!!
-    for i in range(638, 641):
-        data = alterSecret(data, i)
-
 
     with open(filename, 'wb') as file:
         print(calcAfterbirthChecksum(data, offset, length).to_bytes(5, 'little', signed=True)[:4])

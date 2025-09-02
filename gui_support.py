@@ -192,7 +192,7 @@ def unlockAllSecrets(*args):
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
-    global_info["data"] = script.updateSecrets(global_info["data"], [str(i) for i in range(1, 638)])
+    global_info["data"] = script.updateSecrets(global_info["data"], [str(i) for i in range(1, 641)])
     saveFile()
     populateAllInfo()
 
